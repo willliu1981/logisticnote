@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".activity.ProductExchangeActivity">
+
+    <!-- pe -->
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Inventory Management"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/pe.btn_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="編輯"
+        app:layout_constraintBottom_toBottomOf="@+id/pe.btn_create"
+        app:layout_constraintStart_toEndOf="@+id/pe.btn_create"
+        app:layout_constraintTop_toTopOf="@+id/pe.btn_create"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/pe.btn_search_PNO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="搜尋"
+        app:layout_constraintBottom_toBottomOf="@+id/pe.btn_create"
+        app:layout_constraintStart_toEndOf="@+id/pe.btn_edit"
+        app:layout_constraintTop_toTopOf="@+id/pe.btn_create" />
+
+    <Button
+        android:id="@+id/pe.btn_go_to_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="第一筆"
+        app:layout_constraintBottom_toBottomOf="@+id/pe.btn_create"
+        app:layout_constraintStart_toEndOf="@+id/pe.btn_search_PNO"
+        app:layout_constraintTop_toTopOf="@+id/pe.btn_create"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ListView
+        android:id="@+id/pe.lstv_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pe.btn_create"
+        app:layout_constraintVertical_bias="0.0"></ListView>
+
+    <Button
+        android:id="@+id/pe.btn_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="新建"
+        app:layout_constraintStart_toStartOf="@+id/pe.txtv_search_pno"
+        app:layout_constraintTop_toBottomOf="@+id/pe.btn_wage" />
+
+    <Button
+        android:id="@+id/pe.btn_previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="上一次"
+        app:layout_constraintBottom_toBottomOf="@+id/pe.txtv_search_pno"
+        app:layout_constraintStart_toEndOf="@+id/pe.txtv_search_pno"
+        app:layout_constraintTop_toTopOf="@+id/pe.txtv_search_pno"
+        android:layout_marginLeft="8dp" />
+
+    <Button
+        android:id="@+id/pe.btn_wage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Wage"
+        app:layout_constraintEnd_toEndOf="@+id/textView19"
+        app:layout_constraintStart_toStartOf="@+id/textView19"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+    <TextView
+        android:id="@+id/pe.txtv_search_pno"
+        android:layout_width="165dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/textview_border"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

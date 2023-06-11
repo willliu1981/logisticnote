@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ScannerActivityOld">
+
+    <!-- scn -->
+
+    <TextView
+        android:id="@+id/scn.txtv_bkp_2"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/textview_border"
+        android:ems="5"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/scn.txtv_bkp_1"
+        app:layout_constraintStart_toEndOf="@+id/scn.txtv_bkp_1"
+        app:layout_constraintTop_toTopOf="@+id/scn.txtv_bkp_1"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:id="@+id/scn.txtv_bkp_3"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/textview_border"
+        android:ems="5"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/scn.txtv_bkp_1"
+        app:layout_constraintStart_toEndOf="@+id/scn.txtv_bkp_2"
+        app:layout_constraintTop_toTopOf="@+id/scn.txtv_bkp_1"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:id="@+id/scn.txtv_bkp_4"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/textview_border"
+        android:ems="5"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/scn.txtv_bkp_1"
+        app:layout_constraintStart_toEndOf="@+id/scn.txtv_bkp_3"
+        app:layout_constraintTop_toTopOf="@+id/scn.txtv_bkp_1"
+        android:layout_marginLeft="16dp" />
+
+    <me.dm7.barcodescanner.zxing.ZXingScannerView
+        android:id="@+id/scn.sv_scanner"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/scn.btn_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="確定"
+        app:layout_constraintEnd_toEndOf="@+id/scn_btn_light"
+        app:layout_constraintTop_toBottomOf="@+id/scn.edtv_input"
+        android:layout_marginRight="32dp" />
+
+    <Button
+        android:id="@+id/scn.btn_backup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="備份"
+        app:layout_constraintBottom_toBottomOf="@+id/scn.btn_confirm"
+        app:layout_constraintStart_toStartOf="@+id/scn.btn_scan"
+        app:layout_constraintTop_toTopOf="@+id/scn.btn_confirm"
+        android:layout_marginLeft="32dp" />
+
+    <Button
+        android:id="@+id/scn.btn_tail4code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="+4碼"
+        app:layout_constraintBottom_toBottomOf="@+id/scn.edtv_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scn.edtv_input"
+        app:layout_constraintTop_toTopOf="@+id/scn.edtv_input" />
+
+    <TextView
+        android:id="@+id/scn.txtv_result"
+        android:layout_width="193dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/scn.btn_scan"
+        app:layout_constraintStart_toEndOf="@+id/scn.btn_scan"
+        app:layout_constraintTop_toTopOf="@+id/scn.btn_scan" />
+
+    <EditText
+        android:id="@+id/scn.edtv_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="8"
+        android:inputType="textPersonName"
+        android:textSize="28dp"
+        app:layout_constraintEnd_toEndOf="@+id/scn.txtv_result"
+        app:layout_constraintStart_toStartOf="@+id/scn.btn_scan"
+        app:layout_constraintTop_toBottomOf="@+id/scn.txtv_result" />
+
+    <Button
+        android:id="@+id/scn.btn_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="掃描"
+        app:layout_constraintStart_toStartOf="@+id/scn.sv_scanner"
+        app:layout_constraintTop_toBottomOf="@+id/scn.sv_scanner" />
+
+    <Button
+        android:id="@+id/scn_btn_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="燈光"
+        app:layout_constraintBottom_toBottomOf="@+id/scn.txtv_result"
+        app:layout_constraintEnd_toEndOf="@+id/scn.sv_scanner"
+        app:layout_constraintStart_toEndOf="@+id/scn.txtv_result"
+        app:layout_constraintTop_toTopOf="@+id/scn.txtv_result" />
+
+    <TextView
+        android:id="@+id/scn.txtv_bkp_1"
+        android:layout_width="83dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/textview_border"
+        android:ems="5"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="@+id/scn.btn_scan"
+        app:layout_constraintTop_toBottomOf="@+id/scn.btn_confirm" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

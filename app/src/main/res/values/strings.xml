@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">logistic note</string>
+    <string name="spinner_prompt_speed_add">快速新增</string>
+</resources>
