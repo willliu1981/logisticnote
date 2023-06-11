@@ -41,3 +41,6 @@ public class FlashLightSwitcher implements Switchable {
         return this.viewUpdater;
     }
 }
+
+
+//test
