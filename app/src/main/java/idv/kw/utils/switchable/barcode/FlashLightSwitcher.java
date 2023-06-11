@@ -43,4 +43,3 @@ public class FlashLightSwitcher implements Switchable {
 }
 
 
-//test
